@@ -1,0 +1,45 @@
+<image style="width:100%" src="../../images/poster.png"></image>
+<view class='textStyle'>咖啡+祝福  即刻表心意</view>
+<view class="container">
+
+<!--
+ 
+ 
+     <view class="index_item">
+      <image src="../../images/index1.png"></image>
+      <text>告白季</text>
+    </view>
+     <view class="index_item">
+      <image src="../../images/detail_poster2.png"></image>
+      <text>妈妈，我想对你说</text>
+    </view>
+     <view class="index_item">
+        <image src="../../images/index3.png"></image>
+        <text>勇敢浪</text>
+    </view>
+    <view class="index_item">
+        <image src="../../images/index8.png"></image>
+        <text>一起走</text>
+    </view>  
+-->
+
+ 
+<block wx:for="{{imageArray}}" wx:key="this">
+ 
+<view class='index_item'>
+<image src="../../images/{{item.image}}"></image>
+<text>{{item.text}}</text>
+</view>
+</block>
+
+</view>
+<view class='buyHis'>
+
+  
+  <view bindtap='findhistory'>
+  <image src='../../images/buyhistory.png'></image>  
+  <!-- 购买历史 -->
+  <text>购买历史</text>
+  </view>
+  <!-- <text>购买历史</text> -->
+</view>
