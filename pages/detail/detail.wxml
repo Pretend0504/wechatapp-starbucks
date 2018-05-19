@@ -1,2 +1,57 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class='gaobai'>
+  <image src='../../images/gift.png'></image>
+  <!-- 购买历史 -->
+  <text>选择卡面</text>
+
+
+  <!-- <text>购买历史</text> -->
+</view>
+
+<scroll-view scroll-x class='scrollview' scroll-into-view="{{toView}}" scroll-with-animation="true">
+
+  <!-- <icon class='selectFlag' type='success' size='25'></icon> -->
+  <block wx:for="{{imageArray}}" wx:key="this">
+    <view id="view{{index}}" class='myItem {{selectCardIndex==index?"greenBorder":""}}'>
+      <!-- <icon class='selectFlag' type='success' size='25'></icon> -->
+      <image class='' data-id='{{index}}' bindtap='selectCard' src='../../images/{{item.image}}'></image>
+      <icon class='selectFlag' style='display:{{selectCardIndex==index?"block":"none"}}' type='success' size='25'></icon>
+    </view>
+  </block>
+
+
+</scroll-view>
+
+<view class='scrollFlagContainer'>
+  <block wx:for="{{imageArray}}" wx:key="this">
+    <view class='scrollFlag'></view>
+
+  </block>
+  <view class='ani_scroll' style='left:{{toLeft}}rpx;'></view>
+</view>
+
+<view class='present'>
+  <image src='../../images/money.png'></image>
+  <text>选择礼品</text>
+</view>
+
+<view class='flexBoxWraps'>
+  <block wx:for="{{present}}" wx:key="this">
+    <view class='box'>
+      <view class='posit'>{{item.name}}</view>
+      <view>{{item.price}}</view>
+      <view class='line'></view>
+      <view bindtap='clickAdd' data-id='{{item.id}}' style='width:100%;height:50rpx;color:green;text-align:center;'>+</view>
+    </view>
+  </block>
+</view>
+
+<view style='width:100%;height:200rpx;'></view>
+<view class='buy'>
+<view>
+<view style='width:300rpx;margin-left:50rpx;margin-top:30rpx;font-size:30rpx'>{{totalNum}}份礼品</view>
+<view style='width:300rpx;margin-left:50rpx;font-size:40rpx'>¥{{totalPrice}}</view>
+<button class='myButton' style='background-color:{{buygift.length==0?"#cfcfcf":"green"}};color:{{buygift.length==0?"gray":"white"}};'>购买</button>
+
+</view>
+</view>

@@ -3,9 +3,7 @@
    
     "pages/index/index",
     "pages/buyhistory/buyhistory",
-    "pages/detail/detail",
-    "pages/first/first",
-   
+    "pages/detail/detail", 
     "pages/logs/logs"
   ],
   "window":{

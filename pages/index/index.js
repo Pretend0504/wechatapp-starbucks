@@ -1,12 +1,13 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
 
 Page({
   data: {
     motto: 'Hello beauty!',
     me:"liu",
-    imageArray: [{ "image": "index1.png", "text": "告白季" }, { "image": "detail_poster2.png", "text": "妈妈，我想对你说" }, { "image": "index3.png", "text": "一起浪呀" }, { "image": "index8.png", "text": "跟我走吧" }],
+    // imageArray: [{ "image": "index1.png", "text": "告白季" }, { "image": "detail_poster2.png", "text": "妈妈，我想对你说" }, { "image": "index3.png", "text": "一起浪呀" }, { "image": "index8.png", "text": "跟我走吧" }],
+    imageArray: [],
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -18,6 +19,14 @@ Page({
     })
   },
   onLoad: function () {
+
+    if (app.globalData.imageArray) {
+      this.setData({
+        imageArray: app.globalData.imageArray
+      });
+    }
+
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -56,6 +65,14 @@ Page({
   findhistory: function () {
     wx.navigateTo({
       url: '../buyhistory/buyhistory',
+    })
+  },
+  findDetail: function (e) {
+    //  参数e代表引发事件源
+    var id = e.currentTarget.dataset.id;
+    console.log(id);
+    wx.navigateTo({
+      url: '../detail/detail?mid=' + id,
     })
   }
 })

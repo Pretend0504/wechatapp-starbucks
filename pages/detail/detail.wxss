@@ -1,1 +1,148 @@
 /* pages/detail/detail.wxss */
+.gaobai{
+  width: 100%;
+  color: blue;
+  /* text-align: center; */
+  margin-top: 10rpx;
+  font-size:35rpx;
+
+}
+
+.gaobai image{
+  width: 40rpx;
+  height: 40rpx;
+  /* margin: 0 auto;居中 */
+  border-radius: 50%;
+}
+.scrollview{
+  width: 100%;
+  height: 360rpx;
+  white-space: nowrap;/* 强制不换行 */
+  margin-left: 20rpx;
+
+}
+.scrollview image{
+  width: 500rpx;
+  height: 300rpx;
+  margin-right: 30rpx;
+  border-radius: 50rpx;
+}
+.greenBorder{
+  border:10rpx #5f5 solid;
+  border-radius: 20rpx;
+}
+.myItem{
+  display: inline-block;
+  width: 500rpx;
+  height: 300rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  border-radius: 50rpx;
+  margin-right: 30rpx;
+ position: relative;/*设置位置为相对定位 */
+}
+.selectFlag{
+  position: absolute;/*设置位置为绝对定位,容器需要变成相对定位，即position: relative*/
+  top: -10rpx;/*由上向下的距离*/
+  right: -10rpx;/*由右向左的距离*/
+  /* display: none; */
+
+}
+/* .posit{
+  margin: center;
+} */
+.scrollFlag{
+  width: 50rpx;
+  height: 10rpx;
+  background-color: #ccc;
+  margin-right: 20rpx;
+
+}
+.scrollFlagContainer{
+  width: 100%;
+  height: 10rpx;
+  margin-right: 50rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.ani_scroll{
+  width: 50rpx;
+  height: 10rpx;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+}
+.ani_scroll{
+  width: 50rpx;
+  height: 10rpx;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 1s;/*第一个值表示对属性做动画，第二个值动画持续时间*/
+}
+.present{
+   width: 100%;
+  color: #000;
+  /* text-align: center; */
+  margin-top: 10rpx;
+  font-size:35rpx;
+}
+.present image{
+  width: 40rpx;
+  height: 40rpx;
+  /* margin: 0 auto;居中 */
+  border-radius: 50%;
+}
+
+.box{
+   width: 45%;
+  height: 250rpx;
+  border: 1rpx solid gray;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  background-color:#fff;
+  border-radius: 20%;
+  text-align: center;
+  color: #000;
+}
+.flexBoxWraps{
+  width: 100%;
+  height: 500rpx;
+  background-color: white;
+  display: flex;
+  margin-top: 10rpx;
+  flex-wrap: wrap;/*是否换行，wrap表示换行*/
+}
+.posit{
+  margin-top: 30rpx;
+}
+.line{
+  width:100%;
+  height:2rpx;
+  background-color:gray;
+  margin-top: 50rpx;
+}
+.buy{
+  width: 100%;
+  height: 160rpx;
+  border:2rpx #ccc solid;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-wrap:  nowrap;
+}
+.myButton{
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #cfcfcf;
+  margin-top: 40rpx;
+  margin-left: 150rpx;
+  color: gray;
+}
+

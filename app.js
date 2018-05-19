@@ -34,6 +34,8 @@ App({
     // })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    imageArray: [{ "image": "index1.png", "text": "告白季" }, { "image": "detail_poster2.png", "text": "妈妈，我想对你说" }, { "image": "index3.png", "text": "一起浪呀" }, { "image": "index8.png", "text": "跟我走吧" }]
   }
+  
 })

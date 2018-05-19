@@ -26,7 +26,7 @@
  
 <block wx:for="{{imageArray}}" wx:key="this">
  
-<view class='index_item'>
+<view class='index_item'  bindtap='findDetail' data-id='{{index}}'>
 <image src="../../images/{{item.image}}"></image>
 <text>{{item.text}}</text>
 </view>
@@ -43,3 +43,4 @@
   </view>
   <!-- <text>购买历史</text> -->
 </view>
+
