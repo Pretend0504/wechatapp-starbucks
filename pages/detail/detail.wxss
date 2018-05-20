@@ -25,7 +25,7 @@
   width: 500rpx;
   height: 300rpx;
   margin-right: 30rpx;
-  border-radius: 50rpx;
+  border-radius: 20rpx;
 }
 .greenBorder{
   border:10rpx #5f5 solid;
@@ -38,7 +38,7 @@
   margin-top: 20rpx;
   background-color: white;
   border-radius: 50rpx;
-  margin-right: 30rpx;
+  margin-right: 50rpx;
  position: relative;/*设置位置为相对定位 */
 }
 .selectFlag{
@@ -97,19 +97,20 @@
 }
 
 .box{
-   width: 45%;
-  height: 250rpx;
-  border: 1rpx solid gray;
+   width: 44%;
+  height: 280rpx;
+   border: 1rpx solid gray; 
   margin-left: 20rpx;
   margin-top: 30rpx;
   background-color:#fff;
-  border-radius: 20%;
+  border-radius: 30rpx;
   text-align: center;
   color: #000;
+  position: relative;
 }
 .flexBoxWraps{
   width: 100%;
-  height: 500rpx;
+  height: 1000rpx;
   background-color: white;
   display: flex;
   margin-top: 10rpx;
@@ -117,6 +118,8 @@
 }
 .posit{
   margin-top: 30rpx;
+  text-align: left;
+  padding-left:70rpx;
 }
 .line{
   width:100%;
@@ -126,13 +129,14 @@
 }
 .buy{
   width: 100%;
-  height: 160rpx;
+  height: 200rpx;
   border:2rpx #ccc solid;
   background-color: white;
-  position: fixed;
+   position: fixed;/*固定定位 */
   bottom: 0;
+  left: 0;
   display: flex;
-  flex-wrap:  nowrap;
+  flex-wrap:  nowrap; 
 }
 .myButton{
   width: 200rpx;
@@ -144,5 +148,32 @@
   margin-top: 40rpx;
   margin-left: 150rpx;
   color: gray;
+}
+.operContainer{
+  width: 100%;
+  height: 50rpx;
+  background-color:white;
+  display: flex;
+
+}
+.minus,.plus{
+  text-align: center;
+  height: 50rpx;
+
+}
+.minus{
+  width: 50%;
+}
+.countFlag{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background-color: greenyellow;
+  color: white;
+  text-align: center;
+  line-height: 50rpx;
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
 }
 

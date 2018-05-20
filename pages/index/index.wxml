@@ -1,6 +1,12 @@
-<image style="width:100%" src="../../images/poster.png"></image>
-<view class='textStyle'>咖啡+祝福  即刻表心意</view>
-<view class="container">
+<!-- <image style="width:100%" src="../../images/poster.png"></image> -->
+
+<swiper autoplay='true' circular='true' indicator-dots='true' interval='3000' duration='400' class='index_stle'>
+<block wx:for="{{imageArrays}}" wx:key="*this">
+<swiper-item>
+<image style='width:100%;height:500rpx;' src='../../images/{{item.images}}'></image>
+</swiper-item>
+</block>
+</swiper>
 
 <!--
  
@@ -22,25 +28,24 @@
         <text>一起走</text>
     </view>  
 -->
+<view class='textStyle'>咖啡+祝福 即刻表心意</view>
+<view class="container">
+  <block wx:for="{{imageArray}}" wx:key="this">
 
- 
-<block wx:for="{{imageArray}}" wx:key="this">
- 
-<view class='index_item'  bindtap='findDetail' data-id='{{index}}'>
-<image src="../../images/{{item.image}}"></image>
-<text>{{item.text}}</text>
-</view>
-</block>
+    <view class='index_item' bindtap='findDetail' data-id='{{index}}'>
+      <image src="../../images/{{item.image}}"></image>
+      <text>{{item.text}}</text>
+    </view>
+  </block>
 
 </view>
 <view class='buyHis'>
 
-  
+
   <view bindtap='findhistory'>
-  <image src='../../images/buyhistory.png'></image>  
-  <!-- 购买历史 -->
-  <text>购买历史</text>
+    <image src='../../images/buyhistory.png'></image>
+    <!-- 购买历史 -->
+    <text>购买历史</text>
   </view>
   <!-- <text>购买历史</text> -->
 </view>
-
